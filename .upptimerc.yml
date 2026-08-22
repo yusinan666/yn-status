@@ -10,6 +10,7 @@ sites:
     url: https://github.com
 
 status-website:
+  cname: status.yntech.xyz
   name: "YN RolePlay"
   logoUrl: ""
   favicon: ""
