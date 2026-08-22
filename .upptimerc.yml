@@ -11,8 +11,14 @@ sites:
 
 status-website:
   cname: status.yntech.xyz
+  baseUrl: /yn-status
   name: "YN RolePlay"
   logoUrl: ""
+  favicon: ""
+  faviconSvg: ""
+  themeColor: "#00E599"
+  backgroundColor: "#0a0d0c"
+  title: "YN RolePlay 服务状态"
   introTitle: "YN RolePlay 服务状态"
   introMessage: "实时监控所有服务运行状态，每 5 分钟自动检测。"
   navbar:
