@@ -60,8 +60,8 @@ function generateTimeline(service) {
 
     const tooltip = el('div', { className: 'timeline-tooltip' })
     tooltip.innerHTML = `
-      <div class="timeline-tooltip-date">${date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
-      <div class="timeline-tooltip-status">${status === 'no-data' ? 'No data' : status === 'up' ? 'Operational' : status === 'degraded' ? 'Degraded' : 'Down'}</div>
+      <div class="timeline-tooltip-date">${date.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
+      <div class="timeline-tooltip-status">${status === 'no-data' ? '无数据' : status === 'up' ? '正常' : status === 'degraded' ? '降级' : '中断'}</div>
     `
     block.appendChild(tooltip)
     container.appendChild(block)
@@ -97,7 +97,7 @@ export function renderServiceCard(service, timeRange) {
 
     <div class="uptime-section">
       <div class="uptime-label">
-        <span class="uptime-text">Uptime</span>
+        <span class="uptime-text">可用率</span>
         <span class="uptime-value">${formatUptime(uptime)}</span>
       </div>
       <div class="uptime-bar">
@@ -108,12 +108,12 @@ export function renderServiceCard(service, timeRange) {
     <div class="service-meta">
       <div class="meta-item">
         <span class="meta-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
-        <span>Response:</span>
+        <span>响应：</span>
         <span class="meta-value">${formatTime(responseTime)}</span>
       </div>
       <div class="meta-item">
         <span class="meta-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
-        <span>Checked:</span>
+        <span>检测：</span>
         <span class="meta-value">${formatTimeOnly(service.lastUpdated)}</span>
       </div>
     </div>
@@ -123,7 +123,7 @@ export function renderServiceCard(service, timeRange) {
   const timelineSection = el('div', { className: 'timeline-section' })
   timelineSection.innerHTML = `
     <div class="timeline-label">
-      <span class="timeline-text">90 Day Uptime</span>
+      <span class="timeline-text">90 天可用率</span>
     </div>
   `
   timelineSection.appendChild(generateTimeline(service))
@@ -140,8 +140,8 @@ export function renderServices(services, timeRange, container) {
     container.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
-        <div class="empty-title">No services configured</div>
-        <div class="empty-desc">Services will appear here once configured.</div>
+        <div class="empty-title">暂未配置服务</div>
+        <div class="empty-desc">配置完成后，服务将显示在此处。</div>
       </div>
     `
     return
