@@ -6,8 +6,8 @@ sites:
   - name: 图床服务
     url: https://img.yntech.xyz
 
-  - name: GitHub 镜像
-    url: https://github.com
+  - name: 官方论坛
+    url: https://forum.yntech.xyz
 
 status-website:
   cname: status.yntech.xyz
@@ -17,17 +17,15 @@ status-website:
   faviconSvg: ""
   themeColor: "#00D89A"
   backgroundColor: "#070B0A"
-  title: "GTA:Yonder — Service Status"
-  introTitle: "GTA:Yonder Service Status"
-  introMessage: "Real-time infrastructure monitoring for the GTA:Yonder community."
+  title: "GTA:Yonder — 服务状态"
+  introTitle: "GTA:Yonder 服务状态"
+  introMessage: "实时监控 GTA:Yonder 核心服务运行状态。"
   navbar:
-    - title: Status
+    - title: 状态
       href: /
-    - title: GitHub
-      href: https://github.com/yusinan666/yn-status
 
 commitMessages:
-  incidentTitle: "Service Issue"
-  incidentBody: "{{ site }} is experiencing issues"
-  recoveryTitle: "Service Recovered"
-  recoveryBody: "{{ site }} has recovered"
+  incidentTitle: "服务异常"
+  incidentBody: "检测到 {{ site }} 出现问题"
+  recoveryTitle: "服务恢复"
+  recoveryBody: "检测到 {{ site }} 已恢复正常"
