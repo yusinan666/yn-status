@@ -47,7 +47,6 @@ function renderHeader() {
         </div>
         <div class="header-actions">
           <a href="/" class="header-link active">${ICONS.activity} <span>状态</span></a>
-          <a href="https://github.com/yusinan666/yn-status" target="_blank" class="header-link">${ICONS.github} <span>GitHub</span></a>
           <div class="theme-switch">
             <button class="theme-btn" data-theme="system" title="跟随系统">${themeIcons.system}</button>
             <button class="theme-btn" data-theme="dark" title="深色">${themeIcons.dark}</button>
@@ -190,10 +189,6 @@ async function init() {
           <span class="footer-name">GTA:Yonder</span>
           <span class="footer-copy">服务状态</span>
         </div>
-        <div class="footer-links">
-          <a href="https://github.com/yusinan666/yn-status" target="_blank" class="footer-link">GitHub</a>
-        </div>
-        <div class="footer-powered">由 Upptime 驱动</div>
       </div>
     </footer>
   `
