@@ -16,13 +16,13 @@ export function formatUptime(pct) {
 export function formatDate(iso) {
   if (!iso) return '—'
   const d = new Date(iso)
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+  return d.toLocaleDateString('zh-CN', { month: 'short', day: 'numeric', year: 'numeric' })
 }
 
 export function formatDateTime(iso) {
   if (!iso) return '—'
   const d = new Date(iso)
-  return d.toLocaleString('en-US', {
+  return d.toLocaleString('zh-CN', {
     month: 'short', day: 'numeric',
     hour: '2-digit', minute: '2-digit', second: '2-digit',
     hour12: false
@@ -32,7 +32,7 @@ export function formatDateTime(iso) {
 export function formatTimeOnly(iso) {
   if (!iso) return '—'
   const d = new Date(iso)
-  return d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
+  return d.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })
 }
 
 export function getUptimeClass(pct) {
@@ -54,34 +54,34 @@ export function getStatusClass(status) {
 }
 
 export function getStatusText(status) {
-  if (!status) return 'Unknown'
+  if (!status) return '未知'
   const s = status.toLowerCase()
-  if (s === 'up' || s === 'operational') return 'Operational'
-  if (s.includes('degraded')) return 'Degraded'
-  if (s.includes('outage') || s === 'down') return 'Outage'
-  if (s.includes('maintenance')) return 'Maintenance'
-  return 'Unknown'
+  if (s === 'up' || s === 'operational') return '正常'
+  if (s.includes('degraded')) return '降级'
+  if (s.includes('outage') || s === 'down') return '中断'
+  if (s.includes('maintenance')) return '维护中'
+  return '未知'
 }
 
 export function getOverallStatus(services) {
-  if (!services || !services.length) return { class: 'unknown', text: 'No Services', desc: 'No services configured.' }
+  if (!services || !services.length) return { class: 'unknown', text: '暂无服务', desc: '暂未配置服务。' }
   const statuses = services.map(s => getStatusClass(s.status))
   if (statuses.every(s => s === 'operational')) {
-    return { class: 'operational', text: 'All Systems Operational', desc: 'All GTA:Yonder services are running normally.' }
+    return { class: 'operational', text: '所有系统正常运行', desc: '所有 GTA:Yonder 服务运行正常。' }
   }
   if (statuses.every(s => s === 'outage')) {
-    return { class: 'outage', text: 'Major System Outage', desc: 'All services are currently experiencing issues.' }
+    return { class: 'outage', text: '大规模服务中断', desc: '所有服务当前均出现问题。' }
   }
   if (statuses.some(s => s === 'outage')) {
-    return { class: 'outage', text: 'Partial System Outage', desc: 'Some services are currently experiencing issues.' }
+    return { class: 'outage', text: '部分服务中断', desc: '部分服务当前出现问题。' }
   }
   if (statuses.some(s => s === 'degraded')) {
-    return { class: 'degraded', text: 'Degraded Performance', desc: 'Some systems are experiencing degraded performance.' }
+    return { class: 'degraded', text: '性能降低', desc: '部分系统性能有所降低。' }
   }
   if (statuses.some(s => s === 'maintenance')) {
-    return { class: 'maintenance', text: 'Scheduled Maintenance', desc: 'Some services are under scheduled maintenance.' }
+    return { class: 'maintenance', text: '计划维护', desc: '部分服务正在进行计划维护。' }
   }
-  return { class: 'operational', text: 'All Systems Operational', desc: 'All GTA:Yonder services are running normally.' }
+  return { class: 'operational', text: '所有系统正常运行', desc: '所有 GTA:Yonder 服务运行正常。' }
 }
 
 export function calculateAvgResponse(services, field) {
