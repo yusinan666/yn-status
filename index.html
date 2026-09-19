@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA:Yonder — 服务状态</title>
+  <meta name="description" content="实时监控 GTA:Yonder 核心服务运行状态。">
+  <meta name="theme-color" content="#070B0A">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GTA:Yonder — 服务状态">
+  <meta property="og:description" content="实时监控 GTA:Yonder 核心服务运行状态。">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/logo.png">
+</head>
+<body>
+  <div id="app">
+    <!-- Loading skeleton -->
+    <header class="header">
+      <div class="container header-inner">
+        <div class="header-brand">
+          <img src="./assets/logo.png" alt="GTA:Yonder" style="height:28px;width:auto;vertical-align:middle;margin-right:8px">
+          <span class="header-logo">GTA:Yonder</span>
+          <span class="header-divider"></span>
+          <span class="header-subtitle">服务状态</span>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-label">GTA:Yonder</div>
+        <h1 class="hero-title">服务状态</h1>
+        <p class="hero-desc">实时监控 GTA:Yonder 核心服务运行状态</p>
+      </div>
+    </section>
+    <div class="container">
+      <div class="skeleton-card" style="height:80px;margin-bottom:40px"></div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px">
+        <div class="skeleton-card" style="height:100px"></div>
+        <div class="skeleton-card" style="height:100px"></div>
+        <div class="skeleton-card" style="height:100px"></div>
+      </div>
+      <div class="skeleton-card" style="height:200px;margin-bottom:16px"></div>
+      <div class="skeleton-card" style="height:200px;margin-bottom:16px"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+
+  <!-- Inline theme init to prevent flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('gta-yonder-theme') || 'system';
+      var r = t === 'system' ? (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light') : t;
+      document.documentElement.setAttribute('data-theme', r);
+    })();
+  </script>
+</body>
+</html>
