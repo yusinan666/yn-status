@@ -1,0 +1,38 @@
+[
+  {
+    "name": "图床服务",
+    "url": "https://img.yntech.xyz",
+    "icon": "https://icons.duckduckgo.com/ip3/img.yntech.xyz.ico",
+    "slug": "图床服务",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 905,
+    "timeDay": 1169,
+    "timeWeek": 902,
+    "timeMonth": 942,
+    "timeYear": 905,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "官方论坛",
+    "url": "https://forum.yntech.xyz",
+    "icon": "https://icons.duckduckgo.com/ip3/forum.yntech.xyz.ico",
+    "slug": "官方论坛",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 1100,
+    "timeDay": 1381,
+    "timeWeek": 1112,
+    "timeMonth": 1132,
+    "timeYear": 1100,
+    "dailyMinutesDown": {}
+  }
+]
