@@ -1,0 +1,128 @@
+/* =========================================================
+   GTA:Yonder Design System — Tokens
+   ========================================================= */
+:root {
+  /* Background */
+  --bg: #070B0A;
+  --surface: #0D1311;
+  --surface-hover: #121A17;
+  --surface-active: #17201C;
+
+  /* Text */
+  --text: #F2F5F3;
+  --text-secondary: #9AA5A0;
+  --text-muted: #66716C;
+
+  /* Border */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.12);
+
+  /* Accent */
+  --accent: #00D89A;
+  --accent-soft: rgba(0, 216, 154, 0.10);
+  --accent-hover: rgba(0, 216, 154, 0.15);
+
+  /* Status */
+  --success: #22C55E;
+  --success-soft: rgba(34, 197, 94, 0.10);
+  --warning: #F59E0B;
+  --warning-soft: rgba(245, 158, 11, 0.10);
+  --danger: #EF4444;
+  --danger-soft: rgba(239, 68, 68, 0.10);
+  --info: #3B82F6;
+  --info-soft: rgba(59, 130, 246, 0.10);
+
+  /* Typography */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'SF Mono', 'Menlo', 'Consolas', monospace;
+
+  --text-4xl: 48px;
+  --text-3xl: 36px;
+  --text-2xl: 28px;
+  --text-xl: 20px;
+  --text-lg: 18px;
+  --text-md: 15px;
+  --text-base: 14px;
+  --text-sm: 13px;
+  --text-xs: 12px;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(0, 216, 154, 0.15);
+
+  /* Transition */
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast: 120ms;
+  --duration: 180ms;
+  --duration-slow: 250ms;
+  --transition: var(--duration) var(--ease);
+  --transition-fast: var(--duration-fast) var(--ease);
+  --transition-slow: var(--duration-slow) var(--ease);
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 64px;
+}
+
+[data-theme="light"] {
+  --bg: #F5F7F6;
+  --surface: #FFFFFF;
+  --surface-hover: #F1F4F2;
+  --surface-active: #E9EFEC;
+
+  --text: #111614;
+  --text-secondary: #5E6863;
+  --text-muted: #89928D;
+
+  --border: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+
+  --accent: #00A978;
+  --accent-soft: rgba(0, 169, 120, 0.08);
+  --accent-hover: rgba(0, 169, 120, 0.12);
+
+  --success: #16A34A;
+  --success-soft: rgba(22, 163, 74, 0.08);
+  --warning: #D97706;
+  --warning-soft: rgba(217, 119, 6, 0.08);
+  --danger: #DC2626;
+  --danger-soft: rgba(220, 38, 38, 0.08);
+  --info: #2563EB;
+  --info-soft: rgba(37, 99, 235, 0.08);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(0, 169, 120, 0.1);
+}
